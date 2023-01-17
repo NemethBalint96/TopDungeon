@@ -1713,8 +1713,8 @@ MonoBehaviour:
   maxHitpoint: 3
   pushRevocerySpeed: 0.2
   xpValue: 1
-  triggerLenght: 1
-  chaseLenght: 5
+  triggerLenght: 0.3
+  chaseLenght: 1
   filter:
     useTriggers: 0
     useLayerMask: 0
@@ -3919,6 +3919,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1137657902}
   - component: {fileID: 1137657903}
+  - component: {fileID: 1137657904}
   m_Layer: 0
   m_Name: Hitbox
   m_TagString: Untagged
@@ -3967,6 +3968,34 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.10182616, y: 0.09364545}
   m_EdgeRadius: 0
+--- !u!114 &1137657904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1137657901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47591eb62e6839e458e36ff4f089908a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  filter:
+    useTriggers: 0
+    useLayerMask: 0
+    useDepth: 0
+    useOutsideDepth: 0
+    useNormalAngle: 0
+    useOutsideNormalAngle: 0
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 0
+    minDepth: 0
+    maxDepth: 0
+    minNormalAngle: 0
+    maxNormalAngle: 0
+  damage: 1
+  pushForce: 3
 --- !u!1 &1370602215
 GameObject:
   m_ObjectHideFlags: 0
@@ -3979,6 +4008,7 @@ GameObject:
   - component: {fileID: 1370602217}
   - component: {fileID: 1370602219}
   - component: {fileID: 1370602218}
+  - component: {fileID: 1370602220}
   m_Layer: 0
   m_Name: weapon_0
   m_TagString: Untagged
@@ -4080,7 +4110,7 @@ MonoBehaviour:
     minNormalAngle: 0
     maxNormalAngle: 0
   damagePoint: 1
-  pushForce: 2
+  pushForce: 4
   weaponLevel: 0
 --- !u!61 &1370602219
 BoxCollider2D:
@@ -4108,6 +4138,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.1, y: 0.3}
   m_EdgeRadius: 0
+--- !u!95 &1370602220
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1370602215}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d923fe28262c47e42a2f5f6c53b51fe7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1001 &1415623476
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4228,7 +4278,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitpoint: 10
   maxHitpoint: 10
-  pushRevocerySpeed: 0.2
+  pushRevocerySpeed: 0.1
 --- !u!212 &1509876947
 SpriteRenderer:
   m_ObjectHideFlags: 0
